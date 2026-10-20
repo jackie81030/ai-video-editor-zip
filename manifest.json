@@ -1,9 +1,9 @@
 {
- "version": "0.4.0",
+ "version": "0.4.1",
  "min_kit_version": 2,
  "files": {
-  "CLAUDE.md": "4ef4377ca3013bad4480df9a761559bf16c07ffb9550b001322823f740c82b9f",
-  "AGENTS.md": "4ef4377ca3013bad4480df9a761559bf16c07ffb9550b001322823f740c82b9f",
+  "CLAUDE.md": "25d49a9fa02703ee6af2e35547846d36b27f8f6918a616804ecadbf5b283bb0f",
+  "AGENTS.md": "25d49a9fa02703ee6af2e35547846d36b27f8f6918a616804ecadbf5b283bb0f",
   "使用說明.md": "be2236019525289149116f6f6a516d7ebc65a069ff06c5c7dda48ec6f096e8ab",
   "tools/common.py": "ee82aaf2923da84a3b0b26fda969c701463cc9e40f27605cc35742a61dd8458e",
   "tools/finalize.py": "4a36e230df27f53f4ef9a7dab6329eb38b803338b8145721d81e7e31ff8d36b7",
@@ -13,6 +13,7 @@
   "tools/setup_font.py": "2f84fe41cae4e777a2b6f79783a4f14219986d8a8bef9eebad08b0f2b1eed622",
   "tools/setup_model.py": "3149873104e3d25bb69565b571e4cb4d5b611a7f95b8614454345a53daa6898f",
   "tools/silences.py": "fc94bec9043addd4c4793777f38e1008764fe8db732f01a57698599f4abf7085",
+  "tools/startup.py": "ebf2fe67e0b4cf78802ce8c9422eecb73c0c2ab035997ce31f185030566c136a",
   "tools/transcribe.py": "6fd4dad4a509f6ed309149fdf686a5ea3394f2f8fb62495e35acf9317af23af5",
   "tools/update.py": "261f03d45796ad237c249b3270da6766c1f38580c7417cede049382dc0f52105",
   "tools/run.cmd": "307bc5f1a7d403b08e3a27a431b6dba428cbe6ffc0c41de9852d5171bf0ec026",
