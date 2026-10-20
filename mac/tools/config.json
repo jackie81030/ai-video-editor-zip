@@ -1,0 +1,6 @@
+{
+ "update_base": "https://raw.githubusercontent.com/jackie81030/ai-video-editor-zip/main/mac/",
+ "model_url": "https://github.com/jackie81030/ai-video-editor-zip/releases/latest/download/AI-Cut-Model-medium.zip",
+ "download_page": "https://github.com/jackie81030/ai-video-editor-zip",
+ "_說明": "update_base = GitHub 上放小檔案的網址（結尾要有 /）；model_url = Release 裡模型 zip 的下載網址。"
+}

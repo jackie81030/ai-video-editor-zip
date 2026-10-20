@@ -1,5 +1,7 @@
 """把內建的思源宋體裝給目前使用者。用法：python setup_font.py
 
+Mac：複製到 ~/Library/Fonts 就好（不用密碼，系統自己會認）。
+Windows：
 - 裝在使用者字型資料夾（%LOCALAPPDATA%\\Microsoft\\Windows\\Fonts）+ 使用者登錄檔，不需要系統管理員，不會跳 UAC
 - 做法跟舊版 install-font.ps1 一樣：每個檔案只複製一次、登錄檔用檔名當 key（不會互相蓋掉）
 - 裝過就跳過，可以重複執行
@@ -17,9 +19,23 @@ from common import TOOLS
 FONTS = TOOLS / "fonts"
 
 
+def main_mac():
+    files = sorted(FONTS.glob("*.otf"))
+    dest_dir = Path.home() / "Library" / "Fonts"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    new = 0
+    for f in files:
+        if not (dest_dir / f.name).exists():
+            shutil.copy2(f, dest_dir / f.name)
+            new += 1
+    print(f"思源宋體已裝好（{new} 個檔案）。" if new else "思源宋體已就位。")
+
+
 def main():
+    if sys.platform == "darwin":
+        return main_mac()
     if os.name != "nt":
-        print("不是 Windows，跳過字型安裝。")
+        print("不是 Windows 或 Mac，跳過字型安裝。")
         return
     import ctypes
     import winreg

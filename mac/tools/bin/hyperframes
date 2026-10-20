@@ -1,0 +1,3 @@
+#!/bin/bash
+# plain 'hyperframes' also runs the bundled version.
+exec node "$KIT/tools/hyperframes/node_modules/hyperframes/bin/hyperframes.mjs" "$@"

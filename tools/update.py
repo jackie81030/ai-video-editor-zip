@@ -18,6 +18,7 @@ import common  # noqa: F401
 from common import KIT, TOOLS
 
 NEVER_TOUCH = {"我的剪輯偏好.md"}
+KIT_ZIP = "AI-Cut-Kit-Mac.zip" if sys.platform == "darwin" else "AI-Cut-Kit-Windows.zip"
 
 
 def ver(s: str):
@@ -49,7 +50,7 @@ def main():
     manifest = json.loads(get(base + "manifest.json"))
     kit_ver = (TOOLS / "KIT_VERSION").read_text().strip() if (TOOLS / "KIT_VERSION").exists() else "0"
     if int(manifest.get("min_kit_version", 0)) > int(kit_ver):
-        print(f"新版（{remote}）需要新的工具包本體。請到下載頁重新下載「AI-Cut-Kit-Windows.zip」，"
+        print(f"新版（{remote}）需要新的工具包本體。請到下載頁重新下載「{KIT_ZIP}」，"
               "解壓縮後把舊資料夾裡的「我的剪輯偏好.md」和「我的影片」搬過去。")
         return
 

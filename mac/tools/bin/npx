@@ -1,0 +1,8 @@
+#!/bin/bash
+# npx shim: 'npx hyperframes ...' runs the bundled HyperFrames instead of downloading it.
+# Anything else goes to the bundled Node's npx. Only works inside run.sh's environment.
+if [ "$1" = "hyperframes" ]; then
+  shift
+  exec node "$KIT/tools/hyperframes/node_modules/hyperframes/bin/hyperframes.mjs" "$@"
+fi
+exec "$KIT/tools/node/bin/npx" "$@"

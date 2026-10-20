@@ -5,7 +5,7 @@
 
 所有指令都在這個資料夾裡用 PowerShell 跑，**一律透過 `.\tools\run.cmd`**，它會改用內建的 python、node、ffmpeg、hyperframes：
 `.\tools\run.cmd python .\tools\xxx.py …`
-（目前只有 Windows 版。如果是 Mac，跟學員說這包不能用，請他聯絡教練。）
+（這是 Windows 版。學員如果用 Mac，請他到下載頁改下載 `AI-Cut-Kit-Mac.zip`。）
 
 ## 資料夾裡有什麼
 
