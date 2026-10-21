@@ -30,7 +30,25 @@ def get(url: str, timeout=8) -> bytes:
         return r.read()
 
 
+# 舊版 zip 誤放了有真人的示範素材：每次執行都檢查，有就刪（不看版本號，所以舊版升上來也會刪）
+REMOVE = ["tools/特效型錄/clips", "tools/特效型錄/posters", "tools/特效型錄/index.html",
+          "素材庫/b-roll/獲客營-教室全景.mp4", "素材庫/b-roll/審片工具-瀏覽器畫面.mp4",
+          "素材庫/b-roll/claude-code-對話畫面-直式填滿.mp4", "素材庫/b-roll/claude-code-對話畫面.mp4",
+          "素材庫/b-roll/claude-code-終端機操作.mp4"]
+
+
+def remove_private():
+    import shutil
+    for rel in REMOVE:
+        p = KIT / rel
+        if p.is_dir():
+            shutil.rmtree(p, ignore_errors=True)
+        elif p.exists():
+            p.unlink()
+
+
 def main():
+    remove_private()
     cfg = json.loads((TOOLS / "config.json").read_text(encoding="utf-8"))
     base = cfg.get("update_base", "")
     if not base.startswith("http"):

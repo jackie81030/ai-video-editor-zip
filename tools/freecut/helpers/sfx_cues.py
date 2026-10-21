@@ -37,9 +37,9 @@ KIT = HERE.parents[2]                                   # tools/freecut/helpers 
 SFX_ROOT = KIT / "素材庫" / "預設包" / "音效"
 SAME_SFX_GAP = 15.0                                     # 同一個音效 15 秒內不重複(兩行字幕 Round 2 規則)
 VOICE_LUFS = -14.0                                      # 人聲目標響度(render.py 的 loudnorm 也是 -14;對照表的音效 volume 都以這個為基準)
-DUCK_DB = 4.5                                           # 音效響的時候 BGM 往下壓幾 dB(來源建議 3-6dB;Jake 2026-10-07 同意加)
-CAP_HINT = "3-6"                                        # 重音效的每支點數(Jake 2026-10-07 定:只配在看得到的動作上);節奏音另計
-RHYTHM = "節奏音"                                        # Jake 2026-10-20:每 3 秒左右一個輕音讓節奏鮮明,跟重音效分開算
+DUCK_DB = 4.5                                           # 音效響的時候 BGM 往下壓幾 dB(來源建議 3-6dB;教練 2026-10-07 同意加)
+CAP_HINT = "3-6"                                        # 重音效的每支點數(教練 2026-10-07 定:只配在看得到的動作上);節奏音另計
+RHYTHM = "節奏音"                                        # 教練 2026-10-20:每 3 秒左右一個輕音讓節奏鮮明,跟重音效分開算
 
 
 def is_rhythm(c: dict) -> bool:

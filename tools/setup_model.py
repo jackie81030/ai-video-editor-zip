@@ -107,6 +107,8 @@ def main():
     elif not z:
         cfg = json.loads((TOOLS / "config.json").read_text(encoding="utf-8"))
         url = cfg.get("model_url", "")
+        if "--download" not in sys.argv:  # 預設不在背景下載：AI 會用瀏覽器開這個網址，學員看得到進度條
+            sys.exit(f"找不到模型。請用瀏覽器下載：{url}\n下載到「下載」資料夾後再跑一次。")
         if not url.startswith("http"):
             sys.exit("找不到模型檔，也還沒設定下載網址。請學員把「AI-Cut-Model-medium.zip」下載到「下載」資料夾後再試一次。")
         z = download(url)

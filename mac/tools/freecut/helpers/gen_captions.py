@@ -96,7 +96,7 @@ def hl_html(text: str, hl: str | None, hl_color: str | None = None) -> str:
 
 
 # ---- 字幕第二段特效:兩行字幕(line2)+ 螢光筆(kw_fx: marker)----
-# 原型與比較:kw_d.py / kw_fx.py(2026-10-06,學員B-02 實測)。Jake 選了兩行字幕 C 質感 + 溫和進場、螢光筆。
+# 原型與比較:kw_d.py / kw_fx.py(2026-10-06,學員B-02 實測)。教練 選了兩行字幕 C 質感 + 溫和進場、螢光筆。
 # 字級時間 → 進場秒數要不要加偏移:學員B-02 6 句,跟「人聲 + 波形手對」的進場點比,
 # EDL 對映的逐字稿平均晚 0.08 秒、重轉 preview 的逐字稿平均早 0.01 秒 → 不加。
 WORD_LAG = 0.0
@@ -113,7 +113,7 @@ L2_SFX = {
     "type":  ("2-介面科技/keyboard-typing.mp3", 1.44, 0.0, 0.5),
     "pop":   ("6-卡通復古/pop.mp3", 0.341, -0.18, 0.6),       # 檔案前面有 0.22 秒空白,提早放
 }
-# 第二行強度。soft = Jake 選的預設(C 質感:黃字、跟第一行同款黑框);mid / heavy = 使用者說「大一點、強一點」
+# 第二行強度。soft = 教練 選的預設(C 質感:黃字、跟第一行同款黑框);mid / heavy = 使用者說「大一點、強一點」
 L2_STYLES = {
     "soft":  {"cap": 84, "pad": 34, "css": "font-weight:700; color:#FFDD55; padding:6px 24px; border-radius:14px; "
                                            "background:rgba(0,0,0,0.72); box-shadow:0 4px 18px rgba(0,0,0,0.35);"},
@@ -123,9 +123,9 @@ L2_STYLES = {
                                             "paint-order:stroke fill; text-shadow:0 8px 22px rgba(0,0,0,.55);"},
 }
 KW_FX = ("marker",)
-# 螢光筆的提示音:相機對焦「嗶」(Jake 2026-10-07 挑的,Pixabay)。嗶在檔案第 0.78 秒 → 提早 0.68 秒放,
+# 螢光筆的提示音:相機對焦「嗶」(教練 2026-10-07 挑的,Pixabay)。嗶在檔案第 0.78 秒 → 提早 0.68 秒放,
 # 嗶落在螢光筆刷到一半(T+0.1)。前面那段是鏡頭對焦的馬達聲,當前導。一樣算在整支音效額度裡。
-MARKER_SFX = ("3-轉場/camera-focus.mp3", 1.6, -0.68)   # Jake 耳朵挑的(0.6/1.0/1.6/2.5 選 1.6):嗶只有 0.15 秒,LUFS 公式算的 0.327 會被人聲蓋掉
+MARKER_SFX = ("3-轉場/camera-focus.mp3", 1.6, -0.68)   # 教練 耳朵挑的(0.6/1.0/1.6/2.5 選 1.6):嗶只有 0.15 秒,LUFS 公式算的 0.327 會被人聲蓋掉
 
 
 def _n_units(s: str) -> int:
@@ -318,7 +318,7 @@ def build(captions: list[dict], video: str, w: int, h: int,
 
     # ★ 長句自動縮字級。字幕是 nowrap + 置中,寬度超過字幕框(左右各讓出按鈕欄)時
     # 不會換行,而是往右溢出被切掉,而且整句看起來「偏一邊」(選段demo 2026-09-29:
-    # 66px 的 14 字句要 924px,框只有 842px,Jake 審成品才抓到,五句都中)。
+    # 66px 的 14 字句要 924px,框只有 842px,教練 審成品才抓到,五句都中)。
     # 所以逐句量:全形字/標點算 1 個字寬,ASCII 算 0.55,emphasis 款的關鍵字算 1.4,
     # 超出就只把那一句縮到剛好放得下。其他句維持使用者指定的字級。
     pad = re.search(r"padding:\s*\d+px\s+(\d+)px", st_inner)
