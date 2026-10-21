@@ -1,21 +1,22 @@
 {
- "version": "0.5.2",
+ "version": "0.6.0",
  "min_kit_version": 2,
  "files": {
-  "CLAUDE.md": "56d7ba59a2674360ac3945bbf88c4cde7a59e713f371c383f50e8476698b9f71",
-  "AGENTS.md": "56d7ba59a2674360ac3945bbf88c4cde7a59e713f371c383f50e8476698b9f71",
+  "CLAUDE.md": "015751d6b090315213bdd9d52176ecdfa03036cc3539c70589d014d8f7468b04",
+  "AGENTS.md": "015751d6b090315213bdd9d52176ecdfa03036cc3539c70589d014d8f7468b04",
   "使用說明.md": "f0338cfff1b8bf17010a2e71df343e85d21ba945286342d43109154039e78952",
   "tools/common.py": "ee82aaf2923da84a3b0b26fda969c701463cc9e40f27605cc35742a61dd8458e",
   "tools/finalize.py": "4a36e230df27f53f4ef9a7dab6329eb38b803338b8145721d81e7e31ff8d36b7",
   "tools/pixabay.py": "909f9140590e202573dcfd29c642e6ef6b65ccbee27535c5e58ef6544e1d8eec",
+  "tools/print_pdf.py": "528afd6cd1341f6377021991c10d64af2ac4fb5921c48469912ea920ee1b3f02",
   "tools/render.py": "3f46821fae0aa7d7323e39c061dd30e50e153ac6c8d69e9507876b78c0612fb0",
   "tools/send_report.py": "db7aac74c9a64368f7a16783e2b5507c9237b1b8634702eb8772c97e4de6ad23",
   "tools/setup_font.py": "c988f4ddec2ed3e12ea07cf7a16d4bde7e47f66012d4b2c2afa57e76e383a406",
   "tools/setup_model.py": "1eae96b1b8ee0cd2f477f20a447ec21d8508269e8efc1340619c4d70be52f77b",
   "tools/silences.py": "fc94bec9043addd4c4793777f38e1008764fe8db732f01a57698599f4abf7085",
   "tools/startup.py": "ebf2fe67e0b4cf78802ce8c9422eecb73c0c2ab035997ce31f185030566c136a",
-  "tools/transcribe.py": "6fd4dad4a509f6ed309149fdf686a5ea3394f2f8fb62495e35acf9317af23af5",
-  "tools/update.py": "654e34b6122c25391f3f0866700d2dee006903c365b530e71563ab5b4e966a57",
+  "tools/transcribe.py": "1cec0906365bb48153451ea66b20cf519c5923f2c1a88194bbdde604e7f606c4",
+  "tools/update.py": "b4d27835446ea2dc0fa2c00f52d240a70ffe76667bea96328ef08d6552adfe0c",
   "tools/run.sh": "8e5ead3665fdaac78e915a863549639dbdc81e6e4d8e230b3c338e2070c92f2a",
   "tools/bin/npx": "7dae24168f9c6b903dad597099ed9f0a41296bf654003d09519d2003fd5a2419",
   "tools/bin/hyperframes": "203578e2409773127e97ee4afa58ebc572c34feeb229a37baa6db4828ce3db4b",
@@ -51,6 +52,9 @@
   "tools/overlays/ig-follow.html": "7448a1048ac2fc55d4fabe3807e1dd6078a9aec23d596ffc3d1a22fb505979be",
   "tools/overlays/light-leak.html": "ff7a2d8bc35a06c1ad6b8bcf1ecdd124f80172b7d1bda21867835551e8c500e1",
   "tools/overlays/notification.html": "372951765983ec25e08ec64fb6b38b185f471debb1d27bc7816d08167530ea45",
-  ".claude/skills/ai-edit/SKILL.md": "35424b3ce244709488fbf1c2ad222add9b29bd7d741d1e4143d6b7b856710cba"
+  ".claude/skills/ai-edit/SKILL.md": "35424b3ce244709488fbf1c2ad222add9b29bd7d741d1e4143d6b7b856710cba",
+  ".claude/skills/long-video-cutlist/SKILL.md": "afe015cc6aecc5ab58aabf6ac6995ff9f6c870295c22302e58ea5014f9f46054",
+  ".claude/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
+  ".claude/skills/long-video-cutlist/reference/cutlist-template.html": "43e78f3279c7a37f5d18d91105f6bd7034d6c49557b6663514ea730725b39a57"
  }
 }

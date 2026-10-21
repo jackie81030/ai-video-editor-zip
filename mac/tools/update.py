@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))  # 免安裝版 Python 
 import common  # noqa: F401
 from common import KIT, TOOLS
 
-NEVER_TOUCH = {"我的剪輯偏好.md"}
+NEVER_TOUCH = {"我的剪輯偏好.md", "我的資料.md"}
 KIT_ZIP = "AI-Cut-Kit-Mac.zip" if sys.platform == "darwin" else "AI-Cut-Kit-Windows.zip"
 
 

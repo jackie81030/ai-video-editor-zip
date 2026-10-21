@@ -3,6 +3,7 @@
 輸出到 工作檔/<影片名>/：
   words.json      每句和每個字的時間點（秒，原始影片時間）
   transcript.txt  好讀版，一句一行，前面有時間
+  <影片名>.srt    字幕檔格式（長影片選段用）
 """
 import json
 import subprocess
@@ -15,6 +16,14 @@ import common  # noqa: F401  (設定 UTF-8、關掉 GPU)
 from common import FFMPEG, MODEL_DIR, work_dir
 
 import numpy as np
+
+
+def srt_time(s: float) -> str:
+    ms = max(0, round(s * 1000))
+    h, ms = divmod(ms, 3_600_000)
+    m, ms = divmod(ms, 60_000)
+    sec, ms = divmod(ms, 1000)
+    return f"{h:02}:{m:02}:{sec:02},{ms:03}"
 
 
 def main():
@@ -35,7 +44,7 @@ def main():
     from faster_whisper import WhisperModel
     import opencc
 
-    cc = opencc.OpenCC("s2twp")
+    cc = opencc.OpenCC("s2tw")  # 只換字不換詞：s2twp 會把「腳本」改成「指令碼」
     model = WhisperModel(MODEL_DIR, device="cpu", compute_type="int8")
     segments, _ = model.transcribe(
         audio,
@@ -60,6 +69,8 @@ def main():
 
     (out / "words.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     (out / "transcript.txt").write_text("\n".join(lines), encoding="utf-8")
+    srt = [f"{i}\n{srt_time(d['start'])} --> {srt_time(d['end'])}\n{d['text']}\n" for i, d in enumerate(data, 1)]
+    (out / f"{video.stem}.srt").write_text("\n".join(srt), encoding="utf-8")
     print(f"完成，花了 {time.time() - t0:.0f} 秒。檔案在 {out}", flush=True)
 
 
