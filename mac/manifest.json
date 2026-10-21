@@ -1,5 +1,5 @@
 {
- "version": "0.6.0",
+ "version": "0.6.1",
  "min_kit_version": 2,
  "files": {
   "CLAUDE.md": "015751d6b090315213bdd9d52176ecdfa03036cc3539c70589d014d8f7468b04",
@@ -55,6 +55,6 @@
   ".claude/skills/ai-edit/SKILL.md": "35424b3ce244709488fbf1c2ad222add9b29bd7d741d1e4143d6b7b856710cba",
   ".claude/skills/long-video-cutlist/SKILL.md": "afe015cc6aecc5ab58aabf6ac6995ff9f6c870295c22302e58ea5014f9f46054",
   ".claude/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
-  ".claude/skills/long-video-cutlist/reference/cutlist-template.html": "43e78f3279c7a37f5d18d91105f6bd7034d6c49557b6663514ea730725b39a57"
+  ".claude/skills/long-video-cutlist/reference/cutlist-template.html": "bc5d31bbdf436e6721c4905851cf53a0575c7002701fbb1e9a8196ce123dda6a"
  }
 }
