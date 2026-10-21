@@ -1,10 +1,10 @@
 {
- "version": "0.5.1",
+ "version": "0.5.2",
  "min_kit_version": 2,
  "files": {
-  "CLAUDE.md": "2a791777650dd4df5c6ee4e01825efe6665faea38211c7578cfe0b5a2c9e62f0",
-  "AGENTS.md": "2a791777650dd4df5c6ee4e01825efe6665faea38211c7578cfe0b5a2c9e62f0",
-  "使用說明.md": "29d3bf54ef401c1072d919abd8e3fa91cb72ac3ef24f38c82c8eb7ecb44ea711",
+  "CLAUDE.md": "56d7ba59a2674360ac3945bbf88c4cde7a59e713f371c383f50e8476698b9f71",
+  "AGENTS.md": "56d7ba59a2674360ac3945bbf88c4cde7a59e713f371c383f50e8476698b9f71",
+  "使用說明.md": "f0338cfff1b8bf17010a2e71df343e85d21ba945286342d43109154039e78952",
   "tools/common.py": "ee82aaf2923da84a3b0b26fda969c701463cc9e40f27605cc35742a61dd8458e",
   "tools/finalize.py": "4a36e230df27f53f4ef9a7dab6329eb38b803338b8145721d81e7e31ff8d36b7",
   "tools/pixabay.py": "909f9140590e202573dcfd29c642e6ef6b65ccbee27535c5e58ef6544e1d8eec",
