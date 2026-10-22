@@ -1,5 +1,5 @@
 {
- "version": "0.7.2",
+ "version": "0.7.3",
  "min_kit_version": 2,
  "files": {
   "CLAUDE.md": "cd605ea904fe1140bcd4b00d2e303f0bdcbd99c95609445f2e16551072520b95",
@@ -56,6 +56,10 @@
   ".claude/skills/long-video-cutlist/SKILL.md": "2b64cbd5ef5b8e1f65c381e3cbafa22a80d9d20acbebc6ee01b388b48fcbac59",
   ".claude/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
   ".claude/skills/long-video-cutlist/reference/cutlist-template.html": "bc5d31bbdf436e6721c4905851cf53a0575c7002701fbb1e9a8196ce123dda6a",
+  ".agents/skills/ai-edit/SKILL.md": "c975fe16549f2388b10fa2d4a356232d88d09d12e99a602e2befd186ee7db4e6",
+  ".agents/skills/long-video-cutlist/SKILL.md": "2b64cbd5ef5b8e1f65c381e3cbafa22a80d9d20acbebc6ee01b388b48fcbac59",
+  ".agents/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
+  ".agents/skills/long-video-cutlist/reference/cutlist-template.html": "bc5d31bbdf436e6721c4905851cf53a0575c7002701fbb1e9a8196ce123dda6a",
   "素材庫/預設包/對照表.md": "cb8b3b38147d7a5eb3dbcc2eb99a5ec2d9ce6af5885eac87ab15b640495bf220",
   "素材庫/預設包/畫面動作×音效.md": "6bee2c259dfa540f02360a670c162ec2af3c3ab7b753e24ddc3254aa3046fa2f",
   "素材庫/預設包/背景音樂/comedy-搞笑.mp3": "e31680a9ed6af438f698ca728c16fc853277f50270f549fa337e0e80c8caec9f",

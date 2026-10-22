@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>長錄影選段 {{來源檔名}}</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm; }
+  :root { --wine:#581921; --cream:#ece1b2; --gold:#f5c83c; --brown:#7d4b20; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6dfc8; }
+  * { box-sizing: border-box; }
+  body { font-family: 'PingFang TC','Noto Sans TC','Heiti TC',sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.6; margin: 0; }
+  h1,h2,h3 { font-weight: 600; margin: 0; }
+  .head { background: var(--wine); color: var(--cream); padding: 9mm 10mm; border-radius: 5px; margin-bottom: 7mm; }
+  .head .brand { font-size: 8.5pt; letter-spacing: .25em; opacity: .85; }
+  .head h1 { font-size: 20pt; margin-top: 3mm; }
+  .head .meta { font-size: 9.5pt; margin-top: 3mm; opacity: .9; }
+  .head .meta span { margin-right: 6mm; }
+  .intro { border-left: 4px solid var(--gold); background: #fbf9f2; padding: 3mm 5mm; margin-bottom: 6mm; font-size: 10pt; }
+  h2.tier { font-size: 13.5pt; color: var(--wine); border-bottom: 2px solid var(--gold); padding-bottom: 1.5mm; margin: 7mm 0 4mm; page-break-after: avoid; }
+  .clip { border: 1px solid var(--line); border-radius: 4px; padding: 4mm 5mm; margin-bottom: 5mm; }
+  .clip .row { break-inside: avoid; }
+  .clip h3 { font-size: 12.5pt; color: var(--wine); margin-bottom: 2mm; }
+  .clip .hook { background: var(--wine); color: var(--cream); padding: 2mm 3.5mm; border-radius: 3px; font-size: 11pt; margin-bottom: 3mm; }
+  .clip .hook small { color: var(--gold); font-size: 8.5pt; margin-left: 3mm; }
+  .row { display: grid; grid-template-columns: 30mm 1fr; gap: 2mm 3mm; margin-bottom: 1.5mm; }
+  .row .k { color: var(--brown); font-weight: 600; font-size: 9.5pt; }
+  .row .v { font-size: 10pt; }
+  .parts { margin: 2mm 0; padding: 0; list-style: none; }
+  .parts li { padding: 1mm 0; border-top: 1px dashed var(--line); font-size: 10pt; }
+  .parts li:first-child { border-top: 0; }
+  .parts .tc { color: var(--muted); font-size: 9pt; margin-left: 2mm; }
+  .lines { background: #fbf9f2; padding: 2.5mm 3.5mm; border-radius: 3px; font-size: 10pt; margin: 2mm 0; }
+  .lines p { margin: 0 0 1mm; }
+  .lines .who { color: var(--brown); font-weight: 600; }
+  .card { border: 1px solid var(--gold); background: #fff8dc; padding: 1.5mm 3mm; border-radius: 3px; display: inline-block; }
+  .warn { color: #7a1f1f; }
+  .change { border-left: 3px solid var(--gold); padding-left: 3mm; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; margin: 2mm 0 5mm; }
+  th,td { border: 1px solid var(--line); padding: 1.8mm 2.5mm; vertical-align: top; text-align: left; }
+  th { background: var(--cream); color: var(--wine); }
+  .caveats { font-size: 9.5pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 3mm; margin-top: 6mm; }
+  .caveats ul { margin: 1mm 0 0; padding-left: 5mm; }
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="brand">HEADHOME UNIVERSITY 頭家校院</div>
+  <h1>長錄影選段</h1>
+  <div class="meta"><span>來源：{{來源檔名}}（{{總長}}，已讀完 {{讀到第幾分鐘}}）</span><span>日期：{{YYYY-MM-DD}}</span></div>
+</div>
+
+<div class="intro">
+  這份是從整段錄影裡挑出來、可以剪成短影音的段落。每一段都附了下刀點、字幕逐句和開頭字卡，剪輯師照著做就好。「可以直接剪」的先剪，「要補一段」的看情況。剪之前先看最後一頁的注意事項。
+</div>
+
+<!-- 全場地圖（核心第 1 步）：選段前先寫，一定要有，放在最前面 -->
+<h2 class="tier">全場地圖</h2>
+<table>
+  <tr><th style="width:22%">這場在講什麼</th><td>{{一段話，整場的故事}}</td></tr>
+  <tr><th>反覆出現的主題</th><td>{{主題（時間碼、時間碼）}}</td></tr>
+  <tr><th>問題清單</th><td>「{{當事人問的原話}}」{{時間碼}} → 第 {{N}} 支</td></tr>
+  <tr><th>重整清單</th><td>「{{專家把問題講清楚的那句}}」{{時間碼}} → 第 {{N}} 支</td></tr>
+  <tr><th>最完整的一個故事</th><td>{{時間碼 → 時間碼}}，{{一句話}}</td></tr>
+  <tr><th>旅程階段</th><td>{{階段（時間碼 → 時間碼）}}</td></tr>
+</table>
+
+<!-- 學員錄影時對 AI 說的備忘（「幫我注意這段」「剛剛那段是重點」）。沒有的話整段拿掉 -->
+<h2 class="tier">你在錄影裡交代的</h2>
+<table>
+  <tr><th style="width:14%">時間碼</th><th>你說的話</th><th style="width:40%">處理結果</th></tr>
+  <tr><td>{{時間碼}}</td><td>「{{學員原話}}」</td><td>{{剪成第幾支／為什麼剪不成／已排除}}</td></tr>
+</table>
+
+<h2 class="tier">可以直接剪</h2>
+
+<!-- 一支片段 = 一個 section.clip，照下面的結構複製 -->
+<section class="clip">
+  <h3>1. {{標題一句話，看得出這支的答案}}</h3>
+  <div class="row"><div class="k">這支在講什麼</div><div class="v change"><b>{{一兩句：理想客戶帶走的那件事＋學員的答案}}</b></div></div>
+  <div class="hook">「{{前三秒鉤子，逐字}}」<small>{{時間碼}}</small></div>
+  <div class="row"><div class="k">開頭備案</div><div class="v">「{{備案一句}}」{{時間碼}}（找不到寫無）</div></div>
+  <div class="row"><div class="k">位置</div><div class="v">{{開始時間碼，到 0.1 秒，例 25:37.7}} → {{結束時間碼，例 25:51.0}}（約 {{X}} 秒）</div></div>
+  <div class="row"><div class="k">四段</div><div class="v">
+    <ul class="parts">
+      <li>① 開頭鉤子：{{…}}<span class="tc">{{時間碼}}</span></li>
+      <li>② 問題：{{…}}<span class="tc">{{時間碼}}</span></li>
+      <li>③ 方法：{{…}}<span class="tc">{{時間碼}}</span></li>
+      <li>④ 收尾：{{…}}<span class="tc">{{時間碼}}</span></li>
+    </ul>
+  </div></div>
+  <div class="row"><div class="k">字幕逐句</div><div class="v"><div class="lines">
+    <p><span class="who">（客）</span>{{…}}</p>
+    <p><span class="who">（學員）</span>{{…}}</p>
+  </div></div></div>
+  <div class="row"><div class="k">開頭字卡</div><div class="v"><span class="card">{{這支的主題句，講出答案，可以兩行}}</span></div></div>
+  <div class="row"><div class="k">定格點</div><div class="v">「{{全片最利的一句原話}}」{{時間碼}}，停一拍上大字卡（沒有寫無）</div></div>
+  <div class="row"><div class="k">保留停頓</div><div class="v">{{哪裡、為什麼不能剪（沒有寫無）}}</div></div>
+  <div class="row"><div class="k">看完會改變什麼</div><div class="v change">理想客戶看完，{{…}}</div></div>
+  <div class="row"><div class="k">批評別人的話</div><div class="v warn">{{哪一句、風險、正向替代句，由學員自己決定要不要用（沒有寫無）}}</div></div>
+  <div class="row"><div class="k">不可掃到</div><div class="v warn">{{敏感資訊清單；客戶代稱：一位客戶}}</div></div>
+  <div class="row"><div class="k">客戶同意</div><div class="v">{{有錄到 / 待確認}}</div></div>
+</section>
+
+<h2 class="tier">要補一段</h2>
+<!-- 同樣的 section.clip，在「位置」或「四段」裡標出缺哪一段、要從哪裡跳剪 -->
+
+<h2 class="tier">空鏡和補畫面</h2>
+<p style="font-size:9.5pt;color:var(--muted)">沒有可以單獨成片的對話，但畫面可以墊在上面幾支底下。有客人入鏡的，一樣先確認同意。</p>
+<table>
+  <tr><th style="width:18%">檔案／時間碼</th><th>內容</th><th style="width:30%">適合墊在</th></tr>
+  <tr><td>{{…}}</td><td>{{…}}</td><td>{{…}}</td></tr>
+</table>
+
+<h2 class="tier">引用對照表</h2>
+<p style="font-size:9.5pt;color:var(--muted)">每一句引用對應逐字稿原文，確認沒有加字改意思。</p>
+<table>
+  <tr><th style="width:8%">片段</th><th style="width:46%">文件裡的句子</th><th>逐字稿原文（時間碼）</th></tr>
+  <tr><td>1</td><td>{{…}}</td><td>{{…}}（{{時間碼}}）</td></tr>
+</table>
+
+<div class="caveats">
+  <b>注意事項</b>
+  <ul>
+    <li>時間碼寫到 0.1 秒，方便在剪輯軟體裡找位置；但它是自動轉錄抓的，會差 0.2 到 0.5 秒，實際下刀以影片為準。</li>
+    <li>字幕已改成繁體，但自動轉錄的錯字（同音字、專有名詞）還是要人工再校一次。</li>
+    <li>「客戶同意」標待確認的片，先問過客戶再剪。</li>
+    <li>客戶的臉和身分照學員決定處理（不露臉、去背景、代稱）。</li>
+    <li>講者標（？）的句子是從內容推的，剪的時候看畫面確認。</li>
+    <li>「批評別人的話」有標的片，要不要用由學員自己決定。</li>
+    <li>這份只讀逐字稿，沒有講出來的畫面（例如安靜的成果揭曉）可能沒被選到，剪輯師看到好畫面可以自己補。</li>
+  </ul>
+</div>
+
+</body>
+</html>
