@@ -19,5 +19,6 @@ for d in "$KIT"/tools/chrome/chrome-headless-shell/*/chrome-headless-shell-mac-a
   [ -x "$d/chrome-headless-shell" ] && export HYPERFRAMES_BROWSER_PATH="$d/chrome-headless-shell"
 done
 export AIKIT_MODEL="$KIT/tools/models/faster-whisper-medium"
+export FONTCONFIG_FILE="$KIT/tools/fonts.conf"   # 內建 ffmpeg 的 drawtext 才不會一直印 Fontconfig error
 export KIT
 exec "$@"

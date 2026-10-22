@@ -1,9 +1,9 @@
 {
- "version": "0.7.0",
+ "version": "0.7.1",
  "min_kit_version": 2,
  "files": {
-  "CLAUDE.md": "015751d6b090315213bdd9d52176ecdfa03036cc3539c70589d014d8f7468b04",
-  "AGENTS.md": "015751d6b090315213bdd9d52176ecdfa03036cc3539c70589d014d8f7468b04",
+  "CLAUDE.md": "5973713494894b305227f31fdecf2e40b478a897d0dd27c44634b82e002d6f52",
+  "AGENTS.md": "5973713494894b305227f31fdecf2e40b478a897d0dd27c44634b82e002d6f52",
   "使用說明.md": "f0338cfff1b8bf17010a2e71df343e85d21ba945286342d43109154039e78952",
   "tools/common.py": "ee82aaf2923da84a3b0b26fda969c701463cc9e40f27605cc35742a61dd8458e",
   "tools/finalize.py": "4a36e230df27f53f4ef9a7dab6329eb38b803338b8145721d81e7e31ff8d36b7",
@@ -14,10 +14,11 @@
   "tools/setup_font.py": "c988f4ddec2ed3e12ea07cf7a16d4bde7e47f66012d4b2c2afa57e76e383a406",
   "tools/setup_model.py": "1eae96b1b8ee0cd2f477f20a447ec21d8508269e8efc1340619c4d70be52f77b",
   "tools/silences.py": "fc94bec9043addd4c4793777f38e1008764fe8db732f01a57698599f4abf7085",
-  "tools/startup.py": "ebf2fe67e0b4cf78802ce8c9422eecb73c0c2ab035997ce31f185030566c136a",
+  "tools/startup.py": "1fa1629f194aa9d14ee68d8e27bacb1ebebcb13484c224304ab2b841d945cfb7",
   "tools/transcribe.py": "1cec0906365bb48153451ea66b20cf519c5923f2c1a88194bbdde604e7f606c4",
-  "tools/update.py": "b4d27835446ea2dc0fa2c00f52d240a70ffe76667bea96328ef08d6552adfe0c",
-  "tools/run.sh": "8e5ead3665fdaac78e915a863549639dbdc81e6e4d8e230b3c338e2070c92f2a",
+  "tools/update.py": "562f9de5a5c2032c0148ddd581bee5c0bb51a7629435ce106ebae86a7fdd0046",
+  "tools/run.sh": "3770d6caa64a820aa7e2ea789f6fb27bbb16318711774db8c79795e928bd24cf",
+  "tools/fonts.conf": "29225494a4eb87a85e88b3351debf9ec1fd91cd26c06fdeacc9108266f6219fb",
   "tools/bin/npx": "7dae24168f9c6b903dad597099ed9f0a41296bf654003d09519d2003fd5a2419",
   "tools/bin/hyperframes": "203578e2409773127e97ee4afa58ebc572c34feeb229a37baa6db4828ce3db4b",
   "tools/config.json": "03ce53985e3ec05030df37d8011b8d908d93c510c978ab9aab8c163b71023219",
@@ -36,7 +37,7 @@
   "tools/freecut/helpers/overlays.py": "436fef9dad0a8170451d6e97808158da2b7c5cd95245cb9e7f9e5dbb4affe59f",
   "tools/freecut/helpers/pack_transcripts.py": "f40051b975839d597e4518538068b2e955b25e2b8b2d4c3994cd3d531239da10",
   "tools/freecut/helpers/render.py": "4b020fb4bea98051b86ecb22cacfd506b9eabcd167ee07d7fe6d33dfdbaa2a4e",
-  "tools/freecut/helpers/sfx_cues.py": "ea084478e527a397b70a946476116a74f82bb8367dbb8fdb06b756a8f6c661a1",
+  "tools/freecut/helpers/sfx_cues.py": "0e871ad0c09d4f192e632abbf9ada7fcb67069226ee883f9cc569d2eeab7d9a6",
   "tools/freecut/helpers/sound_map.py": "bac85bf4f52e65ef844669d222cda6b84b5c4775bb65390996eeb5099cafc328",
   "tools/freecut/helpers/split_blobs.py": "149ac12e7e7a0bd9d090dcfa2e0840c630c3c5495ace729d53d840816183cb09",
   "tools/freecut/helpers/timeline_view.py": "4c4c9f8a7bf8b9cdb17c6dc2cf7fef75208e7897b2714e3fbd07d7a8a2fbb174",
@@ -52,7 +53,7 @@
   "tools/overlays/ig-follow.html": "7448a1048ac2fc55d4fabe3807e1dd6078a9aec23d596ffc3d1a22fb505979be",
   "tools/overlays/light-leak.html": "ff7a2d8bc35a06c1ad6b8bcf1ecdd124f80172b7d1bda21867835551e8c500e1",
   "tools/overlays/notification.html": "372951765983ec25e08ec64fb6b38b185f471debb1d27bc7816d08167530ea45",
-  ".claude/skills/ai-edit/SKILL.md": "73b8830a04ebdbb16e99847453cfe261f64c14f23d4c7b6efa1cbd0d3d865bf6",
+  ".claude/skills/ai-edit/SKILL.md": "82f4001f10b51b590627bd8a856867e53a8b9a1740b49a032e731dbef938c0dc",
   ".claude/skills/long-video-cutlist/SKILL.md": "afe015cc6aecc5ab58aabf6ac6995ff9f6c870295c22302e58ea5014f9f46054",
   ".claude/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
   ".claude/skills/long-video-cutlist/reference/cutlist-template.html": "bc5d31bbdf436e6721c4905851cf53a0575c7002701fbb1e9a8196ce123dda6a",
@@ -142,6 +143,7 @@
   "素材庫/預設包/音效/7-遊戲/level-up.mp3": "63feed20debcb91248522e51d65538f13a82df7fdd578dee1716f5ea0b3a2b8a",
   "素材庫/預設包/音效/7-遊戲/pixelated-explosions.mp3": "fd98d96cd4f9e9b683e25a35e7b70adcd99603f76066291fadb7a94c43f8ea8c",
   "素材庫/預設包/音效/7-遊戲/power-up.mp3": "e39fa78465db6009fefb8ac05f6c73c912d8869eb3918e75fa9ff77242803dd5",
-  "素材庫/預設包/音效/來源與授權.md": "b8cdf20110a8b1a62bae753a41bbec5d2064602267db7d55ecb309740f2ab25a"
+  "素材庫/預設包/音效/來源與授權.md": "b8cdf20110a8b1a62bae753a41bbec5d2064602267db7d55ecb309740f2ab25a",
+  "審片.html": "d0bf7edca52a06de4bb070c5fa11b1048166f88cc92ad4a6f66b7adc85007331"
  }
 }

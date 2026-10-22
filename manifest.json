@@ -1,9 +1,9 @@
 {
- "version": "0.7.0",
+ "version": "0.7.1",
  "min_kit_version": 2,
  "files": {
-  "CLAUDE.md": "68c18c0ba573116d44baa473b857c8a45b7c6810a08d66da4820262fb849a04d",
-  "AGENTS.md": "68c18c0ba573116d44baa473b857c8a45b7c6810a08d66da4820262fb849a04d",
+  "CLAUDE.md": "cd605ea904fe1140bcd4b00d2e303f0bdcbd99c95609445f2e16551072520b95",
+  "AGENTS.md": "cd605ea904fe1140bcd4b00d2e303f0bdcbd99c95609445f2e16551072520b95",
   "使用說明.md": "f0338cfff1b8bf17010a2e71df343e85d21ba945286342d43109154039e78952",
   "tools/common.py": "ee82aaf2923da84a3b0b26fda969c701463cc9e40f27605cc35742a61dd8458e",
   "tools/finalize.py": "4a36e230df27f53f4ef9a7dab6329eb38b803338b8145721d81e7e31ff8d36b7",
@@ -14,9 +14,9 @@
   "tools/setup_font.py": "c988f4ddec2ed3e12ea07cf7a16d4bde7e47f66012d4b2c2afa57e76e383a406",
   "tools/setup_model.py": "1eae96b1b8ee0cd2f477f20a447ec21d8508269e8efc1340619c4d70be52f77b",
   "tools/silences.py": "fc94bec9043addd4c4793777f38e1008764fe8db732f01a57698599f4abf7085",
-  "tools/startup.py": "ebf2fe67e0b4cf78802ce8c9422eecb73c0c2ab035997ce31f185030566c136a",
+  "tools/startup.py": "1fa1629f194aa9d14ee68d8e27bacb1ebebcb13484c224304ab2b841d945cfb7",
   "tools/transcribe.py": "1cec0906365bb48153451ea66b20cf519c5923f2c1a88194bbdde604e7f606c4",
-  "tools/update.py": "b4d27835446ea2dc0fa2c00f52d240a70ffe76667bea96328ef08d6552adfe0c",
+  "tools/update.py": "562f9de5a5c2032c0148ddd581bee5c0bb51a7629435ce106ebae86a7fdd0046",
   "tools/run.cmd": "307bc5f1a7d403b08e3a27a431b6dba428cbe6ffc0c41de9852d5171bf0ec026",
   "tools/bin/hyperframes.cmd": "7a1a1dd9e5b9d572865d4d9119e6615fba18719d25ae91bb7ad720c21d2ab9db",
   "tools/bin/npx.cmd": "9b8be1dbcf15f1e386d7ed8b981cb3487c7cdc5cf53704d9a2a48b1ce3b0e7e5",
@@ -36,7 +36,7 @@
   "tools/freecut/helpers/overlays.py": "436fef9dad0a8170451d6e97808158da2b7c5cd95245cb9e7f9e5dbb4affe59f",
   "tools/freecut/helpers/pack_transcripts.py": "f40051b975839d597e4518538068b2e955b25e2b8b2d4c3994cd3d531239da10",
   "tools/freecut/helpers/render.py": "4b020fb4bea98051b86ecb22cacfd506b9eabcd167ee07d7fe6d33dfdbaa2a4e",
-  "tools/freecut/helpers/sfx_cues.py": "ea084478e527a397b70a946476116a74f82bb8367dbb8fdb06b756a8f6c661a1",
+  "tools/freecut/helpers/sfx_cues.py": "0e871ad0c09d4f192e632abbf9ada7fcb67069226ee883f9cc569d2eeab7d9a6",
   "tools/freecut/helpers/sound_map.py": "bac85bf4f52e65ef844669d222cda6b84b5c4775bb65390996eeb5099cafc328",
   "tools/freecut/helpers/split_blobs.py": "149ac12e7e7a0bd9d090dcfa2e0840c630c3c5495ace729d53d840816183cb09",
   "tools/freecut/helpers/timeline_view.py": "4c4c9f8a7bf8b9cdb17c6dc2cf7fef75208e7897b2714e3fbd07d7a8a2fbb174",
@@ -52,7 +52,7 @@
   "tools/overlays/ig-follow.html": "7448a1048ac2fc55d4fabe3807e1dd6078a9aec23d596ffc3d1a22fb505979be",
   "tools/overlays/light-leak.html": "ff7a2d8bc35a06c1ad6b8bcf1ecdd124f80172b7d1bda21867835551e8c500e1",
   "tools/overlays/notification.html": "372951765983ec25e08ec64fb6b38b185f471debb1d27bc7816d08167530ea45",
-  ".claude/skills/ai-edit/SKILL.md": "046976fd5aa660321272c38a61e3136f99e79562cbc76a27ff806274c59899fe",
+  ".claude/skills/ai-edit/SKILL.md": "61723162cf0c9d9b5554aef4088864eddb2657eb947daf58d4722e6df86cd9a0",
   ".claude/skills/long-video-cutlist/SKILL.md": "2b64cbd5ef5b8e1f65c381e3cbafa22a80d9d20acbebc6ee01b388b48fcbac59",
   ".claude/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
   ".claude/skills/long-video-cutlist/reference/cutlist-template.html": "bc5d31bbdf436e6721c4905851cf53a0575c7002701fbb1e9a8196ce123dda6a",
@@ -142,6 +142,7 @@
   "素材庫/預設包/音效/7-遊戲/level-up.mp3": "63feed20debcb91248522e51d65538f13a82df7fdd578dee1716f5ea0b3a2b8a",
   "素材庫/預設包/音效/7-遊戲/pixelated-explosions.mp3": "fd98d96cd4f9e9b683e25a35e7b70adcd99603f76066291fadb7a94c43f8ea8c",
   "素材庫/預設包/音效/7-遊戲/power-up.mp3": "e39fa78465db6009fefb8ac05f6c73c912d8869eb3918e75fa9ff77242803dd5",
-  "素材庫/預設包/音效/來源與授權.md": "b8cdf20110a8b1a62bae753a41bbec5d2064602267db7d55ecb309740f2ab25a"
+  "素材庫/預設包/音效/來源與授權.md": "b8cdf20110a8b1a62bae753a41bbec5d2064602267db7d55ecb309740f2ab25a",
+  "審片.html": "d0bf7edca52a06de4bb070c5fa11b1048166f88cc92ad4a6f66b7adc85007331"
  }
 }

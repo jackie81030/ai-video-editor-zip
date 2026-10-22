@@ -89,6 +89,7 @@ def main():
         p.write_bytes(data)
     (KIT / "VERSION").write_text(remote + "\n")
     print(f"已更新到 {remote}（{len(changed)} 個檔案）。")
+    return [p.relative_to(KIT).as_posix() for p, _ in changed]
 
 
 if __name__ == "__main__":
