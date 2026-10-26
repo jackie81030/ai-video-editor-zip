@@ -9,6 +9,7 @@
 |---|---|---|
 | 工具包（Windows） | 約 1GB | [AI-Cut-Kit-Windows.zip](https://github.com/jackie81030/ai-video-editor-zip/releases/latest/download/AI-Cut-Kit-Windows.zip) |
 | 工具包（Mac，M1 以後） | 約 0.5GB | [AI-Cut-Kit-Mac.zip](https://github.com/jackie81030/ai-video-editor-zip/releases/latest/download/AI-Cut-Kit-Mac.zip) |
+| 工具包（Mac，Intel 晶片，macOS 13.4 以後） | 約 0.5GB | [AI-Cut-Kit-Mac-Intel.zip](https://github.com/jackie81030/ai-video-editor-zip/releases/latest/download/AI-Cut-Kit-Mac-Intel.zip) |
 | 轉文字用的模型（兩種電腦共用） | 約 1.4GB | [AI-Cut-Model-medium.zip](https://github.com/jackie81030/ai-video-editor-zip/releases/latest/download/AI-Cut-Model-medium.zip) |
 
 檔案都放在「下載」資料夾就好。模型那個**不用解壓縮**，Claude 第一次用的時候會自己裝好。
@@ -27,6 +28,7 @@
 - **轉文字很久、畫面沒動**：正常，不是當機。
 - **Mac 跳出「Apple 無法驗證」**：按「完成」，跟 Claude 說一聲，它會自己解除。
 - **防毒軟體擋住工具（Windows）**：在防毒軟體裡把 `AI剪片工具包` 資料夾設為信任，不要關掉防毒。
+- **不知道 Mac 是哪種晶片**：左上角蘋果 →「關於這台 Mac」。寫「晶片 Apple M…」下載 Mac 版，寫「處理器 Intel…」下載 Intel 版。Intel 版轉文字和輸出會比較慢。
 - **更新**：不用自己做。每次開始剪片時，Claude 會自動檢查並更新說明書和小程式。
 
 ## 關於使用紀錄

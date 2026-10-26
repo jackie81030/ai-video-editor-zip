@@ -5,7 +5,7 @@
 
 所有指令都在這個資料夾裡用終端機（zsh）跑，**一律透過 `bash tools/run.sh`**，它會改用內建的 python、node、ffmpeg、hyperframes：
 `bash tools/run.sh python ./tools/xxx.py …`
-（這是 Mac 版，只支援 Apple 晶片（M1 以後）。學員如果用 Windows，請他到下載頁改下載 `AI-Cut-Kit-Windows.zip`。）
+（這是 Mac 版：Apple 晶片（M1 以後）用 `AI-Cut-Kit-Mac.zip`，Intel 晶片（macOS 13.4 以後）用 `AI-Cut-Kit-Mac-Intel.zip`。學員如果用 Windows，請他到下載頁改下載 `AI-Cut-Kit-Windows.zip`。）
 
 ## 資料夾裡有什麼
 

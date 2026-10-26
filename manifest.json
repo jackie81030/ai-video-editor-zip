@@ -1,10 +1,10 @@
 {
- "version": "0.8.0",
+ "version": "0.8.1",
  "min_kit_version": 2,
  "files": {
   "CLAUDE.md": "e28b54fec762f2f6a985131a76a74c4546488329d8884c1fd6ff9809a5a647a5",
   "AGENTS.md": "e28b54fec762f2f6a985131a76a74c4546488329d8884c1fd6ff9809a5a647a5",
-  "使用說明.md": "f0338cfff1b8bf17010a2e71df343e85d21ba945286342d43109154039e78952",
+  "使用說明.md": "2505761e98b96817ebf8dfd09b4f7bef40e89794a416bfafcf1199bd84bb0416",
   "tools/common.py": "ee82aaf2923da84a3b0b26fda969c701463cc9e40f27605cc35742a61dd8458e",
   "tools/finalize.py": "4a36e230df27f53f4ef9a7dab6329eb38b803338b8145721d81e7e31ff8d36b7",
   "tools/pixabay.py": "909f9140590e202573dcfd29c642e6ef6b65ccbee27535c5e58ef6544e1d8eec",
