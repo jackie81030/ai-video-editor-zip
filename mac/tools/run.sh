@@ -15,7 +15,7 @@ export PATH="$KIT/tools/bin:$KIT/tools/python/bin:$KIT/tools/node/bin:$KIT/tools
 export PYTHONUTF8=1 PYTHONIOENCODING=utf-8
 export HF_HUB_OFFLINE=1
 export HYPERFRAMES_SKIP_SKILLS=1 HYPERFRAMES_NO_UPDATE_CHECK=1 HYPERFRAMES_NO_TELEMETRY=1 DO_NOT_TRACK=1
-for d in "$KIT"/tools/chrome/chrome-headless-shell/*/chrome-headless-shell-mac-arm64; do
+for d in "$KIT"/tools/chrome/chrome-headless-shell/*/chrome-headless-shell-mac-*; do  # mac-arm64 (Apple 晶片) 或 mac-x64 (Intel)
   [ -x "$d/chrome-headless-shell" ] && export HYPERFRAMES_BROWSER_PATH="$d/chrome-headless-shell"
 done
 export AIKIT_MODEL="$KIT/tools/models/faster-whisper-medium"
