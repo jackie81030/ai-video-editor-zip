@@ -1,5 +1,5 @@
 {
- "version": "0.8.1",
+ "version": "0.8.2",
  "min_kit_version": 2,
  "files": {
   "CLAUDE.md": "e28b54fec762f2f6a985131a76a74c4546488329d8884c1fd6ff9809a5a647a5",
@@ -23,14 +23,14 @@
   "tools/config.json": "0496989533d0215ad19b32775e35597df749fd7fea771e9ebb5e827cfea9d319",
   "tools/PIPELINE-NOTES.md": "4b83cac4cbd90a7ab733391e30741790f0e1107459cc1f0efd16a7bad78a328e",
   "tools/overlay-cards.md": "041a25baed037f46c51af3351d155e592aeccfbff35dce0bcedcd92aa6c02607",
-  "tools/特效工具箱.md": "2c758a33c0f4c74bae183aad99b3be365abc6d1836c54feaaed76e2cd17b03a4",
+  "tools/特效工具箱.md": "11e7a5f1673931a478591e0e0889617390682fb8f1f72afbbde12cb84ff243d6",
   "tools/freecut/helpers/check_broll_gaps.py": "48e5673505f52e78fdbaaff825f479ba415a77ee74e2756858a4e218037f9411",
   "tools/freecut/helpers/cutlist_to_edl.py": "dc28ad7fd3d6f8f7270a1d95835adf68efe31a49df0eb195ec0b561fa4018f64",
   "tools/freecut/helpers/edl_to_captions.py": "c8f2cf5cb37f3aa42b4cdedb67716d1777247e9763d650ef0b51fdf1db73692e",
   "tools/freecut/helpers/gen_captions.py": "ec57c10a4024d7f5578ce08b9ba8b313330cdbae3a153523f6d04d01c4a6ac40",
   "tools/freecut/helpers/grade.py": "4010b4ebc9b87996a19c2a973ee803b83d18c5f3162e146252f8c6ce05f200bf",
   "tools/freecut/helpers/landscape_to_vertical.py": "1719cb7b459f1814d9846a258c7fcb0816562e6fe5061c98f388c670368a5430",
-  "tools/freecut/helpers/make_cover.py": "cdb6b100e0f76fa316626fb32ecf50b23680cd046716e54d35477fec3dbcdc64",
+  "tools/freecut/helpers/make_cover.py": "b10631cd53721c5a9d3a18ad4972e3ac515ad2fc3877e9b42a944a653b6ad9c9",
   "tools/freecut/helpers/make_review_page.py": "8d4767d1f603369c58d05701b3aa12f28a8c72bc45f73c4a98f9e1085ca5567b",
   "tools/freecut/helpers/open_file.py": "db4c57cc6b33a78c6eaea4229e5b702c53447526e52030597393a2027e0d19bc",
   "tools/freecut/helpers/overlays.py": "436fef9dad0a8170451d6e97808158da2b7c5cd95245cb9e7f9e5dbb4affe59f",
@@ -52,11 +52,11 @@
   "tools/overlays/ig-follow.html": "7448a1048ac2fc55d4fabe3807e1dd6078a9aec23d596ffc3d1a22fb505979be",
   "tools/overlays/light-leak.html": "ff7a2d8bc35a06c1ad6b8bcf1ecdd124f80172b7d1bda21867835551e8c500e1",
   "tools/overlays/notification.html": "372951765983ec25e08ec64fb6b38b185f471debb1d27bc7816d08167530ea45",
-  ".claude/skills/ai-edit/SKILL.md": "f05767eba5f7d4f567cbfd1830af04653f2e20ed548a9b6cfc100b13c54c5e25",
+  ".claude/skills/ai-edit/SKILL.md": "930727068256a576892c7c914112d296fbb5985eecbdcc8ef18aa6f3ce6f8bbf",
   ".claude/skills/long-video-cutlist/SKILL.md": "2b64cbd5ef5b8e1f65c381e3cbafa22a80d9d20acbebc6ee01b388b48fcbac59",
   ".claude/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
   ".claude/skills/long-video-cutlist/reference/cutlist-template.html": "bc5d31bbdf436e6721c4905851cf53a0575c7002701fbb1e9a8196ce123dda6a",
-  ".agents/skills/ai-edit/SKILL.md": "f05767eba5f7d4f567cbfd1830af04653f2e20ed548a9b6cfc100b13c54c5e25",
+  ".agents/skills/ai-edit/SKILL.md": "930727068256a576892c7c914112d296fbb5985eecbdcc8ef18aa6f3ce6f8bbf",
   ".agents/skills/long-video-cutlist/SKILL.md": "2b64cbd5ef5b8e1f65c381e3cbafa22a80d9d20acbebc6ee01b388b48fcbac59",
   ".agents/skills/long-video-cutlist/reference/core-method.md": "bbd64685b83317b4b42417a94002134263c8d94bd53642870759127de9ab1eb4",
   ".agents/skills/long-video-cutlist/reference/cutlist-template.html": "bc5d31bbdf436e6721c4905851cf53a0575c7002701fbb1e9a8196ce123dda6a",
@@ -147,6 +147,7 @@
   "素材庫/預設包/音效/7-遊戲/pixelated-explosions.mp3": "fd98d96cd4f9e9b683e25a35e7b70adcd99603f76066291fadb7a94c43f8ea8c",
   "素材庫/預設包/音效/7-遊戲/power-up.mp3": "e39fa78465db6009fefb8ac05f6c73c912d8869eb3918e75fa9ff77242803dd5",
   "素材庫/預設包/音效/來源與授權.md": "b8cdf20110a8b1a62bae753a41bbec5d2064602267db7d55ecb309740f2ab25a",
-  "審片.html": "d0bf7edca52a06de4bb070c5fa11b1048166f88cc92ad4a6f66b7adc85007331"
+  "審片.html": "d0bf7edca52a06de4bb070c5fa11b1048166f88cc92ad4a6f66b7adc85007331",
+  "tools/freecut/helpers/creative_inject.py": "076a79451332180c37f2b09743822bbf4ebafd59ca3d91565eda3f526b1f332c"
  }
 }
