@@ -74,7 +74,8 @@ def fetch(url: str, params: dict) -> dict:
         return json.loads(cf.read_text(encoding="utf-8"))
     full = url + "?" + urllib.parse.urlencode(params)
     try:
-        with urllib.request.urlopen(full, timeout=30) as r:
+        req = urllib.request.Request(full, headers={"User-Agent": "ai-video-editor/1.0"})
+        with urllib.request.urlopen(req, timeout=30) as r:
             body = r.read().decode("utf-8")
             rem = r.headers.get("X-RateLimit-Remaining")
     except urllib.error.HTTPError as e:
